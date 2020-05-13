@@ -431,11 +431,11 @@ class _LinkButtonState extends State<LinkButton> {
     final toolbar = ZefyrToolbar.of(context);
     final style = toolbar.editor.selectionStyle;
 
-    String value = 'Tap to edit link';
+    String value = '添加超链接';
     if (style.contains(NotusAttribute.link)) {
       value = style.value(NotusAttribute.link);
     }
-    final clipboardEnabled = value != 'Tap to edit link';
+    final clipboardEnabled = value != '添加超链接';
     final body = !isEditing
         ? _LinkView(value: value, onTap: edit)
         : _LinkInput(
